@@ -3,26 +3,6 @@ import dotenv from 'dotenv';
 dotenv.config(); // 从.env文件中加载环境变量--ZHIPUAI_API_KEY--密钥
 const ai = new ZhipuAI({});
 
-// 测试用的代码
-const dialogue = async () => {
-    const result = await ai.createCompletions({
-        model: "glm-4",
-        messages: [
-            {"role": "user", "content": "你好"},
-            {"role": "assistant", "content": "我是人工智能助手"},
-            {"role": "user", "content": "你叫什么名字"},
-            {"role": "assistant", "content": "我叫chatGLM"},
-            {"role": "user", "content": "你都可以做些什么事"}
-        ],
-        stream: true,
-    })
-    // console.log(data, "message")
-    for await (const chunk of result) {
-        console.log(chunk.toString())
-    }
-}
-// dialogue();
-
 // 将用户查询翻译为SQL查询语句
 const translateToSQL = async (userQuery) => {
     const ai = new ZhipuAI();
