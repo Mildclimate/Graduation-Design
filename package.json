@@ -1,0 +1,16 @@
+{
+  "name": "graduation",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "my project fot graduation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "boheng.xie",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "zhipuai-sdk-nodejs-v4": "^0.1.12"
+  }
+}
